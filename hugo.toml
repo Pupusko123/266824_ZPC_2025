@@ -1,4 +1,4 @@
 baseURL = 'https://example.org/'
 languageCode = 'cz-cs'
-title = "ZPC caban"
-theme = "ananke"
+title = 'ZPC caban'
+theme = 'ananke'

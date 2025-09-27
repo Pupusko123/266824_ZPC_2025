@@ -1,11 +1,9 @@
 +++
-date = '2025-09-22T14:32:07+02:00'
+date = '2025-09-22'
 draft = false
-title = 'Robit to čo chcem bol vždy môj sen'
+title = 'Projektová dokumentácia predmetu ZPC '
 +++
-date = '2025-08-19'
-draft = false
-title = 'Můj projekt'
-+++
+![Expedičná meteorologická stanica](/Screenshot2025-04-15171854.png)
+title1 = 'Můj projekt'
 ## Niečo o mne
-hhhjkjkh
+Volám sa Adam Caban a som študentom 2. ročníka na Ustave Konštrukčného inžinierstva FSI VUT v Brne.   
