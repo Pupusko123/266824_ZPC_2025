@@ -11,7 +11,16 @@ div.obrazky_wrapper p {
 body{
     background-color: rgb(5, 99, 99);
 }
-
+.hero {
+    padding: 40px 20px 30px 20px;
+    max-width: 1500px;
+    box-shadow: 0 2px 16px rgba(44,62,80,0.10);
+    text-align: center;
+    border-radius: 12px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 nav {
     background: #000000;
     position: fixed;
@@ -46,6 +55,14 @@ nav a.active {
     margin-top: 50px;
     color: white;
 }
+.content-o-mne {
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+    margin-bottom: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+}
 .nadpis-uvodna-stranka {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 24px;
@@ -57,4 +74,69 @@ nav a.active {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 300;
     color: white;
+}
+.hero-content {
+    margin-bottom: 20px;
+}
+.hero-lead {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 18px;
+}
+.cta-btn {
+    display: inline-block;
+    background: #e67e22;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin: 40px 0;
+    padding: 0 0 40px 0;
+}
+.card {
+    padding: 40px 0 30px 0;
+    width: 100%;
+    box-shadow: 0 2px 16px rgba(44,62,80,0.10);
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+    background-color: #fff;
+}
+.card:hover {
+    box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+}
+.card h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+.card-link {
+    margin-top: 18px;
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.card-link:hover {
+    color: #ca6c1d;
+}
+.footer {
+    text-align: center;
+    padding: 150px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
