@@ -38,6 +38,30 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+}
+
+/* Project 1 gallery styles */
+.projekt1-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.projekt1-img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projekt1-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
     color: white;
 }
 
@@ -56,12 +80,13 @@ nav a.active {
     color: white;
 }
 .content-o-mne {
-    margin-top: 50px;
+    margin-top: 30px;
     color: white;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 300;
+    font-weight: 600;
+    line-height: 1.5;
 }
 .nadpis-uvodna-stranka {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -69,6 +94,15 @@ nav a.active {
     font-weight: bold;
     text-align: center;
     color: white;
+}
+.o-mne-obrazok {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 .popis-projektu {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -132,6 +166,15 @@ nav a.active {
 }
 .card-link:hover {
     color: #ca6c1d;
+}
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 .footer {
     text-align: center;
