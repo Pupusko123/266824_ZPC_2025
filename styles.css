@@ -48,10 +48,11 @@ nav ul {
     gap: 2rem;
     margin: 2rem 0;
     flex-wrap: wrap;
+    min-height: 40vh; /* keep gallery vertically centered in the section */
 }
 
 .projekt1-img {
-    max-width: 350px;
+    max-width: 280px;
     width: 100%;
     height: auto;
     border-radius: 12px;
@@ -183,3 +184,18 @@ nav a.active {
     width: 100%;
     bottom: 0;
 }
+.slicer-img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    image-rendering: optimizeQuality;
+}
+
+.slicer-img:hover {
+    transform: scale(1.23);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
