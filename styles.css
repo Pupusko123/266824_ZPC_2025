@@ -130,6 +130,48 @@ nav a.active {
     margin-top: 10px;
     transition: background 0.2s;
 }
+
+/* Arduino code preview styling */
+.arduino-section {
+    margin: 2rem auto;
+    max-width: 900px;
+    text-align: center;
+    color: white;
+}
+
+.download-link {
+    display: inline-block;
+    margin: 0.5rem 0 1rem 0;
+    padding: 8px 12px;
+    background: #e67e22;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.code-preview {
+    display: block;
+    margin: 0.75rem auto 2rem auto;
+    max-width: 820px;
+    text-align: left;
+}
+
+pre.arduino-code {
+    background: #0b1220;
+    color: #e6eef6;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: auto;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 720px) {
+    .arduino-section { padding: 0 1rem; }
+    pre.arduino-code { font-size: 0.85rem; }
+}
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -197,5 +239,31 @@ nav a.active {
 .slicer-img:hover {
     transform: scale(1.23);
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Slightly larger size for zapojenie image in Projekt 5 gallery */
+.zapojenie-img {
+    max-width: 360px; /* a bit larger than .projekt1-img */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+    .zapojenie-img { max-width: 320px; }
+}
+
+/* Slight increase + centering for the two side images in Projekt 5 */
+.proj5-side-img {
+    max-width: 320px; /* slightly larger than the default 280px */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+    .proj5-side-img { max-width: 280px; }
 }
 

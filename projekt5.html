@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 1 | Projects Overview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: link to CSS -->
+</head>
+<body>
+    <header>
+    <main class="content">    
+        <h1>Projekt 5. Programovanie mikrokontroleru</h1>
+    </main>
+        <nav>
+            <ul>
+                <li><a href="projekty.html">Mini projekty</a></li>
+                <li><a href="projekt1.html">Prvý projekt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content-o-mne">
+            <h2>O projekte</h2>
+            <p>
+            V projekte som sa venoval programovaniu mikrokontrolérov a základom elektroniky na platforme Arduino.Hlavným cieľom bolo naučiť sa základy programovania v kombinácii s praktickou prácou s hardvérovými komponentmi, ako sú senzory a rôzne polovodičové prvky. V rámci projektu som navrhol a vytvoril jednoduchý systém využívajúci ultrazvukový snímač na meranie vzdialenosti. Pri priblížení objektu snímač odoslal signál, na základe ktorého sa rozsvietila červená LED dióda. Po vzdialení objektu sa naopak aktivovala zelená dióda. Počas realizácie som sa oboznámil s programovacím jazykom C/C++ používaným v prostredí Arduino IDE. Získal som skúsenosti s využívaním knižníc, implementáciou funkcií na ovládanie hardvéru a jeho správnym zapojením.</p>
+            </p>
+                        <div class="projekt1-gallery">
+                            <img src="obrazky/obsadene.png" alt="Arduino zapojenie" class="projekt1-img proj5-side-img">
+                            <img src="obrazky/zapojenie.png" alt="Arduino doska zapojenie" class="projekt1-img zapojenie-img">
+                            <img src="obrazky/volno.png" alt="Arduino doska obsadene" class="projekt1-img proj5-side-img">
+                           
+                        </div>
+                        <!-- Arduino sketch section for Projekt 5 -->
+                        <section class="arduino-section">
+                    
+                                <div class="code-preview">
+                                        <pre class="arduino-code">
+                                        <h1>Použitý kod</h1>
+// --- Piny ---
+int trigPin = 9;
+int echoPin = 10;
+int ledClose = 7;    
+int ledFar = 8;       
+int buttonPin = 2;    
+bool running = false;
+int lastButtonState = HIGH;
+
+long duration;
+int distance;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(ledClose, OUTPUT);
+  pinMode(ledFar, OUTPUT);
+  pinMode(buttonPin, INPUT_PULLUP); 
+  Serial.begin(9600);
+}
+
+void loop() {
+  int buttonState = digitalRead(buttonPin);
+  if (buttonState == LOW && lastButtonState == HIGH) {
+    running = !running;
+    delay(200);  // 
+  }
+  lastButtonState = buttonState;
+
+  if (running) {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+
+    duration = pulseIn(echoPin, HIGH);
+    distance = duration * 0.034 / 2; // 
+
+    Serial.print("Vzdialenost: ");
+    Serial.print(distance);
+    Serial.println(" cm");
+
+  
+    if (distance < 10) {            
+      digitalWrite(ledClose, HIGH);
+      digitalWrite(ledFar, LOW);
+    } 
+    else {
+      digitalWrite(ledClose, LOW);
+      digitalWrite(ledFar, HIGH);
+    }
+
+    delay(200); 
+  } 
+  else {
+    // ak je meranie vypnuté
+    digitalWrite(ledClose, LOW);
+    digitalWrite(ledFar, LOW);
+  }
+}
+</pre>
+                                </div>
+                        </section>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Adam Caban. ZPC. </p>
+    </footer>
+</body>
+</html>
