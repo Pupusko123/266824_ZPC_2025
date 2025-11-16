@@ -173,18 +173,21 @@ pre.arduino-code {
     pre.arduino-code { font-size: 0.85rem; }
 }
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center rows when wrapped */
     gap: 30px;
     width: 100%;
     margin: 40px 0;
     padding: 0 0 40px 0;
 }
 .card {
-    padding: 40px 0 30px 0;
-    width: 100%;
+    padding: 24px 16px;
+    flex: 0 1 320px; /* fixed-ish card width, shrinks on small screens */
+    max-width: 360px;
     box-shadow: 0 2px 16px rgba(44,62,80,0.10);
     text-align: center;
+    color: #000; /* make card text black */
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -197,7 +200,7 @@ pre.arduino-code {
 }
 .card h2 {
     margin-top: 0;
-    color: #2c3e50;
+    color: #000; /* ensure card headings are black */
     font-size: 1.2rem;
 }
 .card-link {
