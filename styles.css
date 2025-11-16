@@ -182,8 +182,8 @@ pre.arduino-code {
     padding: 0 0 40px 0;
 }
 .card {
-    padding: 24px 16px;
-    flex: 0 1 320px; /* fixed-ish card width, shrinks on small screens */
+    padding: 40px 30px;
+     flex: 0 1 320px; /* fixed-ish card width, shrinks on small screens */
     max-width: 360px;
     box-shadow: 0 2px 16px rgba(44,62,80,0.10);
     text-align: center;
